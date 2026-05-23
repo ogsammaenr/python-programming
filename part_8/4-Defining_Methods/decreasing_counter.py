@@ -10,6 +10,7 @@ class DecreasingCounter:
         self.value -= 1
 
 
+# Test Alanı
 if __name__ == "__main__":
     counter = DecreasingCounter(10)
     counter.print_value()

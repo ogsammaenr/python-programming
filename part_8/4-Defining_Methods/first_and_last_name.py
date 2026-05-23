@@ -11,6 +11,7 @@ class Person:
         return self.lastName
 
 
+# Test Alanı
 if __name__ == "__main__":
     peter = Person("Peter Pythons")
     print(peter.return_first_name())
