@@ -1,4 +1,5 @@
 import pygame
+import random
 
 pygame.init()
 window = pygame.display.set_mode((640, 480))
@@ -10,29 +11,24 @@ robot = pygame.image.load("robot.bmp")
 width = robot.get_width()
 height = robot.get_height()
 
-x = 0
-y = 0
-# hareket hizi
-velocity = 2
+# ekranin merkezinde baslatiyoruz
+x = 320 - width / 2
+y = 240 - height / 2
 
-clock = pygame.time.Clock()
 while True:
-    # her seferinde ekrana yazdiriyoruz
     for event in pygame.event.get():
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            click_x, click_y = event.pos
+
+            # tiklanan nokta robotun uzerinde mi
+            if x <= click_x <= x + width and y <= click_y <= y + height:
+                # ekrandan tasmayacak sekilde bir rastgele konum olusturuyoruz
+                x = random.randint(0, 640 - width)
+                y = random.randint(0, 480 - height)
+
         if event.type == pygame.QUIT:
             exit()
 
     window.fill((0, 0, 0))
     window.blit(robot, (x, y))
     pygame.display.flip()
-
-    y += velocity
-
-    # alt kenera carptiginda hizi ters ceviriyoruz
-    if velocity > 0 and y + height >= 480:
-        velocity = -velocity
-    # ust kenera carptiginda hizi ters ceviriyoruz
-    if velocity < 0 and y <= 0:
-        velocity = -velocity
-
-    clock.tick(60)
