@@ -34,10 +34,12 @@ game_active = True
 
 def check_collision(player, pipes):
     for pipe in pipes:
+        # colliderect iki dortgenin cakisip cakismadigini kontrol eder
         if player.rect.colliderect(pipe.bottom_rect) or player.rect.colliderect(
             pipe.top_rect
         ):
             return False
+    # oyuncunun collider'inin yere veya tepeye carpip carpmadigini kontrol ediyoruz
     if player.rect.top <= 0 or player.rect.bottom >= SCREEN_HEIGHT:
         return False
     return True
@@ -63,7 +65,6 @@ while True:
             # Yeni bir boru çifti ekle (Ekranın hemen sağından başlayacak şekilde)
             pipes.append(PipePair(SCREEN_WIDTH + 100, SCREEN_HEIGHT))
 
-    # --- ÇİZİM VE GÜNCELLEME ALANI ---
     # 1. Arka planı çiz
     screen.blit(bg_surface, (0, 0))
 
@@ -88,3 +89,5 @@ while True:
 
     pygame.display.update()
     clock.tick(60)
+
+# Bu oyun yapay zeka yardimi ile olusturulmustur

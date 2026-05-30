@@ -16,15 +16,17 @@ class Player:
         self.total_frames = 4
         self.frames = []
 
-        BUYUTME_KATSAYISI = 2
+        # karakteri 2 katina buyutmek icin (16x16 -> 32x32)
+        scale_index = 2
 
         for i in range(self.total_frames):
+            # animasyon parcalarini ayiriyoruz
             kutu = pygame.Rect(
                 i * self.frame_width, 0, self.frame_width, self.frame_height
             )
             kare_gorseli = self.sprite_sheet.subsurface(kutu)
 
-            buyutulmus_kare = pygame.transform.scale_by(kare_gorseli, BUYUTME_KATSAYISI)
+            buyutulmus_kare = pygame.transform.scale_by(kare_gorseli, scale_index)
 
             self.frames.append(buyutulmus_kare)
 
@@ -34,6 +36,7 @@ class Player:
         # Fizik ve Konum değişkenleri
         self.image = self.frames[int(self.current_frame)]
         self.rect = self.image.get_rect(center=(x, y))
+        # yercekimi katsayisi
         self.gravity = 0.40
         self.movement = 0
 

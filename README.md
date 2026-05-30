@@ -11,13 +11,26 @@ Bu depo, Helsinki Üniversitesi'nin [University of Helsinki MOOC](https://progra
 
 ## 🛠️ Kurulum ve Gereksinimler
 
+### 1. Reponun Klonlanması
+
+Projeyi yerel makinenize indirmek için terminalinizden aşağıdaki komutu çalıştırabilirsiniz:
+
+```bash
+git clone https://github.com/ogsammaenr/python-programming.git
+cd python-programming
+```
+
+### 2. Bağımlılıkların Kurulması
+
 Projedeki özellikle görsel ve oyun tabanlı ödevleri (Part 13 ve Part 14) çalıştırabilmek için sisteminizde **Pygame** kütüphanesinin kurulu olması gerekmektedir.
 
-Pygame kütüphanesi sistem genelinde kurulu değilse, terminalinizden aşağıdaki komutu çalıştırarak kullanıcı bazlı kurulum yapabilirsiniz:
+Pygame kütüphanesi sistem genelinde kurulu değilse, aşağıdaki komut ile kullanıcı bazlı kurulum yapabilirsiniz:
 
-```
+```bash
 python3 -m pip install -U pygame --user
 ```
+
+> 💡 **Ek Kaynak:** Pygame ile ilgili fonksiyonlar, modüller ve daha detaylı kullanım detayları için resmi [Pygame Dokümantasyonu](https://www.pygame.org/docs/) adresini ziyaret edebilirsiniz.
 
 ---
 
@@ -29,11 +42,11 @@ Projedeki dosyaları (özellikle görsel varlıklar içeren **Part 13** ve **Par
 
 Proje ana dizinindeyken terminal üzerinden şu komut şablonuyla çalıştırma yapmalısınız:
 
-```
+```bash
 python part_14/main.py
 ```
 
-*Eğer ilgili klasörün içine (`cd part_14`) girip `python main.py` şeklinde çalıştırırsanız, 'robot.bmp' veya 'assets/' altındaki görseller yüklenirken yol hataları ('FileNotFoundError') alabilirsiniz.*
+*Eğer ilgili klasörün içine (`cd part_14`) girip `python main.py` şeklinde çalıştırırsanız, `robot.bmp` veya `assets/` altındaki görseller yüklenirken yol hataları ('FileNotFoundError') alabilirsiniz.*
 
 ---
 
@@ -41,12 +54,15 @@ python part_14/main.py
 
 Depoda yer alan bazı önemli konu başlıkları ve örnek dosyalar şu şekildedir:
 
-* **Part 8 & 9:** Sınıf (Class) ve Metot tanımlamaları, Kapsülleme (Encapsulation) mantığı ('car.py', 'recording.py'), Sınıf Nitelikleri ('postcodes.py').
-* **Part 10:** Sınıf Hiyerarşileri ve Miras Alma (Inheritance) yapısı ('areas.py', 'laptop_computer.py', 'word_game.py').
-* **Part 11:** List Comprehensions ('begin_with_a_vowel.py'), İleri Seviye Yineleme ve Özyineleme (Recursion) algoritmaları ('recursive_sum.py', 'greatest_node.py').
-* **Part 12:** Fonksiyonlerin Argüman Olarak Kullanımı, Üreticiler (Generators - 'prime_numbers.py'), Fonksiyonel Programlama ('reduce', 'filter', 'map') ve Düzenli İfadeler (Regex - 'regular_expressions.py').
-* **Part 13 & 14:** Pygame ile Temel Grafik/Animasyon İşlemleri ('bouncing_ball.py', 'robot_invasion.py') ve Flappy Bird benzeri modüler mini oyun uygulaması ('main.py', 'player.py', 'pipes.py').
+* **Part 8 & 9:** Sınıf (Class) ve Metot tanımlamaları, Kapsülleme (Encapsulation) mantığı (`car.py`, `recording.py`), Sınıf Nitelikleri (`postcodes.py`).
+* **Part 10:** Sınıf Hiyerarşileri ve Miras Alma (Inheritance) yapısı (`areas.py`, `laptop_computer.py`, `word_game.py`).
+* **Part 11:** List Comprehensions (`begin_with_a_vowel.py`), İleri Seviye Yineleme ve Özyineleme (Recursion) algoritmaları (`recursive_sum.py`, `greatest_node.py`).
+* **Part 12:** Fonksiyonlerin Argüman Olarak Kullanımı, Üreticiler (Generators - `prime_numbers.py`), Fonksiyonel Programlama (`reduce`, `filter`, `map`) ve Düzenli İfadeler (Regex - `regular_expressions.py`).
+* **Part 13 & 14:** Pygame ile Temel Grafik/Animasyon İşlemleri (`bouncing_ball.py`, `robot_invasion.py`) ve Flappy Bird benzeri modüler mini oyun uygulaması (`main.py`, `player.py`, `pipes.py`).
+
+### 🎨 Kullanılan Varlıklar (Assets)
+
+* **Part 14** altındaki Flappy Bird projesinde kullanılan grafik ve görsel varlıklar, Megacrash tarafından hazırlanan **[Flappy Bird Assets](https://megacrash.itch.io/flappy-bird-assets)** paketinden alınmıştır.
 
 ---
-
 <sub>**Not:** Kod içindeki yorum satırlarında Türkçe karakterlerin nadir olmasının sebebi kullandığım klavye düzeni ile ilgilidir.</sub>
